@@ -65,7 +65,7 @@
       media="screen"
       rel="stylesheet"
     />
-
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script
       defer
       src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
@@ -82,8 +82,9 @@
     class="relative"
     x-data="{ mobileMenu: false }"
   > <div class="container">
+<!--  -->
 
- 
+<!--  -->
       <div id="main" class="relative">
       <div
         x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {
@@ -117,7 +118,7 @@
                   <span
                     @click="triggerNavItem('#services')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Services</span
+                    >Technologies</span
                   >
 
                   <span
@@ -139,18 +140,6 @@
 
                 <li class="group pl-6">
                   <span
-                    @click="triggerNavItem('#clients')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Clients</span
-                  >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
-                </li>
-
-                <li class="group pl-6">
-                  <span
                     @click="triggerNavItem('#work')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Work</span
@@ -162,23 +151,9 @@
                 </li>
 
                 <li class="group pl-6">
-                  <span
-                    @click="triggerNavItem('#statistics')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Statistics</span
-                  >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
-                </li>
-
-                <li class="group pl-6">
-                  <span
-                    @click="triggerNavItem('#blog')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Blog</span
-                  >
+                  <span class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
+                    <a href="https://wsjung0516.github.io/blog211112/">BLOG</a>
+                    </span>
 
                   <span
                     class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
@@ -276,8 +251,7 @@
               <li class="py-2">
                 <span
                   @click="triggerMobileNavItem('#blog')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Blog</span
+                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Blog</span
                 >
               </li>
 
@@ -358,6 +332,16 @@
                 programming is user convenience and maintainability. I am always
                 studying to solve these problems more efficiently and quickly. I
                 read Medium Daily Digest every morning.
+                <br/><br/>
+                When I first started learning Angular, I had a lot to learn and understand 
+                the basic functions of Angular, but in the meantime, I had a lot of trial 
+                and error because there were so many things to learn, 
+                such as javascript, typescript, RxJS, state management, css, html and etc.
+                <br/><br/>
+                Although English is not a native language and it is not natural for 
+                language communication, reading English is not difficult and the 
+                translation software is good, so I think that communication problems 
+                between team members become more natural over time.
               </p>
             </div>
             <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
@@ -548,10 +532,32 @@
             class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
           >
             <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary cursor-pointer"
-              data-modal-toggle="defaultModal"
+              class="group rounded px-8 py-12 shadow hover:bg-primary"
+              
             >
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+            <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-angular" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-angular" class="modal-toggle" />
+                <label for="my-modal-angular" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Angular</h3>
+                    <p class="py-4 text-left">It's a programming tool I'm proud to be able to use Angular well. 
+                      Although it is difficult and time consuming to learn at first, once you learn it, 
+                      you can build the program as if you were assembling a Lego, 
+                      and the deeper you understand it, the more fun it becomes.
+                      <br/><br/>
+                      Because it is a framework, it has the disadvantage of having to learn various 
+                      basic techniques and getting used to it, 
+                      but I think it is a very suitable tool to carry out a large-scale project.
+                      <br/><br/>
+                      In 2016, from the release of Angular 2 to the current version of Angular 14, 
+                      I can say that I have tried almost every feature of Angular. 
+                      Although some features of the CDK have not yet been applied.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img src="assets/img/angular2.svg" alt="development icon" />
                 </div>
@@ -575,6 +581,25 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-rxjs" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-rxjs" class="modal-toggle" />
+                <label for="my-modal-rxjs" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">RxJS</h3>
+                    <p class="py-4 text-left">RxJS, which contains an unfamiliar concept of Obaservable, 
+                      will actually be a difficult concept for developers. 
+                      This is because the way of thinking must be different from the existing program method. 
+                      When I first learned a new tool called Angular, 
+                      the concept itself was not easy, but RxJS was really an ambush. 
+                      I probably would have given up if the Angular Framework didn't use RxJS by default.
+                      But RxJS is a really attractive library. 
+                      If you are a program developer, I would definitely recommend you to learn.
+                      I am programming by applying RxJS as much as possible during program development.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/rxjs.svg"
@@ -603,6 +628,22 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-tailwind" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-tailwind" class="modal-toggle" />
+                <label for="my-modal-tailwind" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Tailwindcss</h3>
+                    <p class="py-4 text-left">CSS is also a big topic for front end developers. 
+                      Currently, there are several commercialized css libraries, 
+                      but I think tailwind css is the most systematic and consistent 
+                      application for developers. Although I did not use it from the beginning, 
+                      I went through a lot of trial and error during css programming, 
+                      but now I have tailwind css, so when programming, only tailwind css is applied to development.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/tailwind.svg"
@@ -631,6 +672,29 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-cypress" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-cypress" class="modal-toggle" />
+                <label for="my-modal-cypress" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Cypress</h3>
+                    <p class="py-4 text-left">At one time, I had experience applying the storybook library to UI program development. 
+                      In order to develop the user interface and business logic separately, 
+                      I thought that the storybook library was very useful. However, when the project actually started, 
+                      there were a lot of cumbersome tasks to program by applying the storybook.
+                      So, rather than applying a storybook, I thought that I would apply Cypress to the project more precisely.<br/><br/>
+                      When the program development is completed and deployed, the e2e test tool is essential to determine whether 
+                      the program operates normally as it originally intended by performing the UI part test.
+                      Although testing for Business Logic is important, e2e test tool is essential to determine whether 
+                      the program operates normally.
+                      <br/><br/>
+                      It has not yet been applied in the actual program, and I have experience applying 
+                      it only to the sample program, but I believe that there will be no major problems 
+                      in applying it to future projects because I have sufficiently practiced the test.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/cypress.svg"
@@ -659,6 +723,24 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-ngxs" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-ngxs" class="modal-toggle" />
+                <label for="my-modal-ngxs" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">NgXS</h3>
+                    <p class="py-4 text-left">In the case of front-end program, if the size of the program grows, 
+                      the state management of all modules of the program becomes too complicated only with simple 
+                      program logic without applying the state management library. This makes the maintenance cost too high.
+                      <br/><br/>State management called NgRX is widely used for the Angular framework. However, 
+                      since this product was simply introduced as a state management method of React, 
+                      it is complicated to use and there are a lot of unnecessary coding work, so it is not easy for novice users to apply.
+                      <br/><br/>To overcome these shortcomings, a library of state management programs dedicated to Angular called NgXS was created.
+                      I use NgXS for all programs to manage the state.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img src="assets/img/ngxs.svg" alt="Graphic Design icon" />
                 </div>
@@ -682,6 +764,28 @@
 
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-spectator" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-spectator" class="modal-toggle" />
+                <label for="my-modal-spectator" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Spectator</h3>
+                    <p class="py-4 text-left">For developers, unit tests are inevitable. To be good at test programs is 
+                      to learn more than the basic knowledge to learn development programs, 
+                      so it can be said that being good at test programs has very experienced skills.
+                      <br/><br/>  
+                      To test the Angular project, you can apply Jasmine and Karma, which are provided by default, 
+                      or you can use Jest, which is applied and used in React. These programs have too many secondary 
+                      program coding and too many skills to learn, so the reverse phenomenon may occur in which 
+                      the test program work becomes more complicated than the actual development program.
+                      <br/><br/>
+                      In this aspect, Spectator, an Angular-only test program, requires less additional coding 
+                      and is much easier to apply than other libraries because it requires less additional learning.
+                      I plan to write a unit test program by applying Spectator to all projects in the future.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/spectator.svg"
@@ -711,6 +815,27 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-github" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-github" class="modal-toggle" />
+                <label for="my-modal-github" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Github Action</h3>
+                    <p class="py-4 text-left">At one time, I applied Jenkins to my project. 
+                      Jenkins basically requires Linux OS, and it works only after installing Java and then Jenkins. 
+                      Then, the CI/CD work proceeds by configuring the pipeline. 
+                      Of course, these tasks can be performed using Docker, but once setting tasks such as Linux OS, 
+                      Java, and Jenkins versions are also burdensome for developers. 
+                      So I applied Github Action to the project. Compared to Jenkins, 
+                      Github Action is a suitable method for implementing CI/CD because the environment 
+                      configuration is very simple and you can learn how to use it easily. 
+                      And I plan to apply this method to other projects in the future.
+
+                    </p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/github-action.svg"
@@ -741,6 +866,21 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-aws" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-aws" class="modal-toggle" />
+                <label for="my-modal-aws" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">AWS Web Service</h3>
+                    <p class="py-4 text-left">
+                      I have experience using AWS Web Service for CI/CD. For this purpose, Docker Container is applied.
+                      <br/><br/>
+                      <a href="https://wsjung0516.github.io/ci-cd-start/"><span class="text-primary cursor-pointer">Details</span></a>
+                    </p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/aws-webservice.svg"
@@ -760,8 +900,7 @@
                 >
                   AWS web Service
                 </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
                 >
                   AWS web services provide distributed computing processing
                   capacity and software tools via AWS server farms.
@@ -770,6 +909,23 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-docker" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-docker" class="modal-toggle" />
+                <label for="my-modal-docker" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Docker</h3>
+                    <p class="py-4 text-left">When developing a frontend program, 
+                      a backend program can be developed as a mockup, 
+                      but it is more efficient to use Docker to create and apply an environment like an actual project.
+                      In fact, I have experience in developing the backend environment using MySQL and Nestjs using Docker.
+                      <br/><br/>
+                      <a href="https://wsjung0516.github.io/ci-cd-start/"><span class="text-primary cursor-pointer">Details</span></a>
+                    </p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img
                     src="assets/img/docker1.svg"
@@ -799,6 +955,21 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-nest" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-nest" class="modal-toggle" />
+                <label for="my-modal-nest" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Nestjs</h3>
+                    <p class="py-4 text-left">Nestjs program structure is almost identical to Angular. 
+                      At first, I was not very interested in this product, 
+                      and I simply wrote a backend server program using the express library. 
+                      But gradually nestjs became more and more popular, and when I first encountered it, 
+                      the program structure was the same as that of Angular, so I immediately applied it to the project and used it.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img src="assets/img/nestjs.svg" alt="Graphic Design icon" />
                 </div>
@@ -823,6 +994,22 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-prisma" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-prisma" class="modal-toggle" />
+                <label for="my-modal-prisma" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">Prisma</h3>
+                    <p class="py-4 text-left">Prisma is easy to program, 
+                      and it is easy to create a schema in an existing database, 
+                      and when modifying a schema, it is well applied to the database, 
+                      so I have experience in project using Prisma.
+                      In my personal experience, it was much more comfortable than other ORM, 
+                      and there are many functions without requiring any admin coding, so the work became very easy.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img src="assets/img/prisma.svg" alt="Graphic Design icon" />
                 </div>
@@ -846,6 +1033,20 @@
             </div>
             <div class="group rounded px-8 py-12 shadow hover:bg-primary">
               <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <!-- The button to open modal -->
+                <label for="my-modal-mysql" class=""><span class=" text-white cursor-pointer">Details</span></label>
+                
+                <input type="checkbox" id="my-modal-mysql" class="modal-toggle" />
+                <label for="my-modal-mysql" class="modal cursor-pointer">
+                  <label class="modal-box relative" for="">
+                    <h3 class="text-lg font-bold">MySQL</h3>
+                    <p class="py-4 text-left">Although I do not have the skills to design and optimize the 
+                      relation diagram of RDBMS myself, 
+                      I have the ability to understand the basic structure of the database and apply it to the program.
+                      In fact, in many projects, I developed by connecting with the Frontend program through Rest API.</p>
+                  </label>
+                </label>
+                <!-- modal end -->
                 <div class="hidden group-hover:block">
                   <img src="assets/img/mysql.svg" alt="Graphic Design icon" />
                 </div>
@@ -890,7 +1091,7 @@
               class="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
               <img
-                src="assets/img/portfolio-apple.jpeg"
+                src="assets/img/monitor-image.png"
                 class="w-full shadow"
                 alt="portfolio image"
               />
@@ -900,7 +1101,7 @@
               class="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
               <img
-                src="assets/img/portfolio-stripe.jpeg"
+                src="assets/img/split-window.png"
                 class="w-full shadow"
                 alt="portfolio image"
               />
@@ -910,7 +1111,7 @@
               class="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
               <img
-                src="assets/img/portfolio-fedex.jpeg"
+                src="assets/img/pizza-order220304.png"
                 class="w-full shadow"
                 alt="portfolio image"
               />
@@ -920,65 +1121,11 @@
               class="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
               <img
-                src="assets/img/portfolio-microsoft.jpeg"
+                src="assets/img/ocr-element.png"
                 class="w-full shadow"
                 alt="portfolio image"
               />
             </a>
-          </div>
-        </div>
-
-        <div class="bg-grey-50" id="clients">
-          <div class="container py-16 md:py-20">
-            <div class="mx-auto w-full sm:w-3/4 lg:w-full">
-              <h2
-                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-              >
-                My latest clients
-              </h2>
-              <div
-                class="flex flex-wrap items-center justify-center pt-4 sm:pt-4"
-              >
-                <span class="m-8 block">
-                  <img
-                    src="assets/img/logo-coca-cola.svg"
-                    alt="client logo"
-                    class="mx-auto block h-12 w-auto"
-                  />
-                </span>
-                <span class="m-8 block">
-                  <img
-                    src="assets/img/logo-apple.svg"
-                    alt="client logo"
-                    class="mx-auto block h-12 w-auto"
-                  />
-                </span>
-
-                <span class="m-8 block">
-                  <img
-                    src="assets/img/logo-netflix.svg"
-                    alt="client logo"
-                    class="mx-auto block h-12 w-auto"
-                  />
-                </span>
-
-                <span class="m-8 block">
-                  <img
-                    src="assets/img/logo-amazon.svg"
-                    alt="client logo"
-                    class="mx-auto block h-12 w-auto"
-                  />
-                </span>
-
-                <span class="m-8 block">
-                  <img
-                    src="assets/img/logo-stripe.svg"
-                    alt="client logo"
-                    class="mx-auto block h-12 w-auto"
-                  />
-                </span>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -1149,257 +1296,12 @@
           </div>
         </div>
 
-        <div
-          class="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
-          style="background-image: url(assets/img/experience-figure.png)"
-          id="statistics"
-        >
-          <div class="container">
-            <div
-              class="mx-auto w-5/6 bg-white py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full"
-            >
-              <div
-                class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5"
-              >
-                <div
-                  class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-                >
-                  <div>
-                    <img
-                      src="assets/img/icon-project.svg"
-                      class="mx-auto h-12 w-auto md:h-20"
-                      alt="icon project"
-                    />
-                  </div>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1
-                      class="font-body text-2xl font-bold text-primary md:text-4xl"
-                    >
-                      12
-                    </h1>
-                    <h4
-                      class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-                    >
-                      Finished Projects
-                    </h4>
-                  </div>
-                </div>
 
-                <div
-                  class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
-                >
-                  <div>
-                    <img
-                      src="assets/img/icon-award.svg"
-                      class="mx-auto h-12 w-auto md:h-20"
-                      alt="icon award"
-                    />
-                  </div>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1
-                      class="font-body text-2xl font-bold text-primary md:text-4xl"
-                    >
-                      3
-                    </h1>
-                    <h4
-                      class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-                    >
-                      Awards Won
-                    </h4>
-                  </div>
-                </div>
 
-                <div
-                  class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
-                >
-                  <div>
-                    <img
-                      src="assets/img/icon-happy.svg"
-                      class="mx-auto h-12 w-auto md:h-20"
-                      alt="icon happy clients"
-                    />
-                  </div>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1
-                      class="font-body text-2xl font-bold text-primary md:text-4xl"
-                    >
-                      8
-                    </h1>
-                    <h4
-                      class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-                    >
-                      Happy Clients
-                    </h4>
-                  </div>
-                </div>
-
-                <div
-                  class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
-                >
-                  <div>
-                    <img
-                      src="assets/img/icon-puzzle.svg"
-                      class="mx-auto h-12 w-auto md:h-20"
-                      alt="icon puzzle"
-                    />
-                  </div>
-                  <div class="pt-5 md:pl-5 md:pt-0">
-                    <h1
-                      class="font-body text-2xl font-bold text-primary md:text-4xl"
-                    >
-                      99
-                    </h1>
-                    <h4
-                      class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
-                    >
-                      Bugs Fixed
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-grey-50" id="blog">
-          <div class="container py-16 md:py-20">
-            <h2
-              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-            >
-              I also like to write
-            </h2>
-            <h4
-              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-            >
-              Check out my latest posts!
-            </h4>
-            <div
-              class="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10"
-            >
-              <a href="/post" class="shadow">
-                <div
-                  style="background-image: url(assets/img/post-01.png)"
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                >
-                  <span
-                    class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
-                  ></span>
-                  <span
-                    class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
-                    >Read More</span
-                  >
-                </div>
-                <div class="bg-white py-6 px-5 xl:py-8">
-                  <span class="block font-body text-lg font-semibold text-black"
-                    >How to become a frontend developer</span
-                  >
-                  <span class="block pt-2 font-body text-grey-20"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
-                </div>
-              </a>
-              <a href="/post" class="shadow">
-                <div
-                  style="background-image: url(assets/img/post-02.png)"
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                >
-                  <span
-                    class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
-                  ></span>
-                  <span
-                    class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
-                    >Read More</span
-                  >
-                </div>
-                <div class="bg-white py-6 px-5 xl:py-8">
-                  <span class="block font-body text-lg font-semibold text-black"
-                    >My personal productivity system</span
-                  >
-                  <span class="block pt-2 font-body text-grey-20"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
-                </div>
-              </a>
-              <a href="/post" class="shadow">
-                <div
-                  style="background-image: url(assets/img/post-03.png)"
-                  class="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
-                >
-                  <span
-                    class="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"
-                  ></span>
-                  <span
-                    class="absolute right-0 bottom-0 mr-4 mb-4 block rounded-full border-2 border-white px-6 py-2 text-center font-body text-sm font-bold uppercase text-white md:text-base"
-                    >Read More</span
-                  >
-                </div>
-                <div class="bg-white py-6 px-5 xl:py-8">
-                  <span class="block font-body text-lg font-semibold text-black"
-                    >My year in review 2020</span
-                  >
-                  <span class="block pt-2 font-body text-grey-20"
-                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</span
-                  >
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
         <div class="container py-16 md:py-20" id="contact">
-          <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-          >
-            Here's a contact form
-          </h2>
-          <h4
-            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-          >
-            Have Any Questions?
-          </h4>
-          <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
-            <p class="font-body text-grey-10">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit
-              condimentum turpis nisl sem, viverra habitasse urna ante lobortis
-              fermentum accumsan. Viverra habitasse urna ante lobortis fermentum
-              accumsan.
-            </p>
-          </div>
-          <form class="mx-auto w-full pt-10 sm:w-3/4">
-            <div class="flex flex-col md:flex-row">
-              <input
-                class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
-                placeholder="Name"
-                type="text"
-                id="name"
-              />
-              <input
-                class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
-                placeholder="Email"
-                type="text"
-                id="email"
-              />
-            </div>
-            <textarea
-              class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
-              placeholder="Message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <button
-              class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
-            >
-              Send
-              <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
-            </button>
-          </form>
+
+
           <div class="flex flex-col pt-16 lg:flex-row">
             <div
               class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
@@ -1415,7 +1317,7 @@
               <p
                 class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
               >
-                (+881) 111 222 333
+                (+1) 213 548 1859
               </p>
             </div>
             <div
@@ -1432,7 +1334,7 @@
               <p
                 class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
               >
-                name@mydomain.com
+                wonsup.jung@gmail.com
               </p>
             </div>
             <div
@@ -1448,80 +1350,20 @@
               </div>
               <p
                 class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
-              >
-                123 New York D Block 1100, 2011 USA
+                >
+                3416 Manning Ave. LA. CA. USA
               </p>
             </div>
           </div>
         </div>
 
-        <div
-          class="h-72 bg-cover bg-center bg-no-repeat sm:h-64 md:h-72 lg:h-96"
-          style="background-image: url(assets/img/map.png)"
-        ></div>
-
-        <div
-          class="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24"
-          style="background-image: url(assets/img/bg-cta.jpg)"
-        >
-          <div class="container relative z-30">
-            <h3
-              class="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl"
-            >
-              Keep <span class="font-bold">up-to-date</span> <br />
-              with what I'm up to
-            </h3>
-            <form class="mt-6 flex flex-col justify-center sm:flex-row">
-              <input
-                class="w-full rounded px-4 py-3 font-body text-black sm:w-2/5 sm:py-4 lg:w-1/3"
-                type="text"
-                id="email"
-                placeholder="Give me your Email"
-              />
-              <button
-                class="mt-2 rounded bg-yellow px-8 py-3 font-body text-base font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-white focus:border-transparent focus:outline-none focus:ring focus:ring-yellow sm:ml-2 sm:mt-0 sm:py-4 md:text-lg"
-              >
-                Join the club
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary">
+      
+        
+        <div class="bg-primary">
         <div class="container flex flex-col justify-between py-6 sm:flex-row">
           <p class="text-center font-body text-white md:text-left">
-            © Copyright 2022. All right reserved, ATOM.
+            © Copyright 2022. All right reserved, Wonsup Jung.
           </p>
-          <div
-            class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0"
-          >
-            <a href="/">
-              <i
-                class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
-              ></i>
-            </a>
-            <a href="/" class="pl-4">
-              <i
-                class="bx bxl-twitter text-2xl text-white hover:text-yellow"
-              ></i>
-            </a>
-            <a href="/" class="pl-4">
-              <i
-                class="bx bxl-dribbble text-2xl text-white hover:text-yellow"
-              ></i>
-            </a>
-            <a href="/" class="pl-4">
-              <i
-                class="bx bxl-linkedin text-2xl text-white hover:text-yellow"
-              ></i>
-            </a>
-            <a href="/" class="pl-4">
-              <i
-                class="bx bxl-instagram text-2xl text-white hover:text-yellow"
-              ></i>
-            </a>
-          </div>
         </div>
       </div>
       </div>
