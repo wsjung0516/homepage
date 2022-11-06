@@ -81,8 +81,10 @@
     :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
     class="relative"
     x-data="{ mobileMenu: false }"
-  >
-    <div id="main" class="relative">
+  > <div class="container">
+
+ 
+      <div id="main" class="relative">
       <div
         x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {
           mobileMenu = false;
@@ -1522,11 +1524,10 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
 
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
-    <!-- <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script> -->
   </body>
 </html>
