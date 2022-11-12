@@ -65,7 +65,11 @@
       media="screen"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.38.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script
       defer
       src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"
@@ -81,1582 +85,1885 @@
     :class="{ 'overflow-hidden max-h-screen': mobileMenu }"
     class="relative"
     x-data="{ mobileMenu: false }"
-  > <div class="container">
-<!--  -->
+  >
+    <div class="container">
+      <!--  -->
 
-<!--  -->
+      <!--  -->
       <div id="main" class="relative">
-      <div
-        x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {
+        <div
+          x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {
           mobileMenu = false;
           this.triggerNavItem(id)
           }
         }"
-      >
-        <div class="w-full z-50 top-0 py-3 sm:py-5 absolute">
-          <div class="container flex items-center justify-between">
-            <div>
-              <a href="/">
-                <!-- <img src="assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" /> -->
-              </a>
+        >
+          <div class="w-full z-50 top-0 py-3 sm:py-5 absolute">
+            <div class="container flex items-center justify-between">
+              <div>
+                <a href="/">
+                  <!-- <img src="assets/img/logo.svg" class="w-24 lg:w-48" alt="logo image" /> -->
+                </a>
+              </div>
+              <div class="hidden lg:block">
+                <ul class="flex items-center">
+                  <li class="group pl-6">
+                    <span
+                      @click="triggerNavItem('#about')"
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                      >About</span
+                    >
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+
+                  <li class="group pl-6">
+                    <span
+                      @click="triggerNavItem('#services')"
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                      >Technologies</span
+                    >
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+
+                  <li class="group pl-6">
+                    <span
+                      @click="triggerNavItem('#portfolio')"
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                      >Portfolio</span
+                    >
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+
+                  <li class="group pl-6">
+                    <span
+                      @click="triggerNavItem('#work')"
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                      >Work</span
+                    >
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+
+                  <li class="group pl-6">
+                    <span
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >
+                      <a href="https://wsjung0516.github.io/blog211112/"
+                        >BLOG</a
+                      >
+                    </span>
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+
+                  <li class="group pl-6">
+                    <span
+                      @click="triggerNavItem('#contact')"
+                      class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                      >Contact</span
+                    >
+
+                    <span
+                      class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                    ></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="block lg:hidden">
+                <button @click="mobileMenu = true">
+                  <i class="bx bx-menu text-4xl text-white"></i>
+                </button>
+              </div>
             </div>
-            <div class="hidden lg:block">
-              <ul class="flex items-center">
-                <li class="group pl-6">
+          </div>
+
+          <div
+            class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+            :class="{ 'opacity-100 pointer-events-auto': mobileMenu }"
+          >
+            <div
+              class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
+            >
+              <button
+                class="absolute top-0 right-0 mt-4 mr-4"
+                @click="mobileMenu = false"
+              >
+                <img
+                  src="assets/img/icon-close.svg"
+                  class="h-10 w-auto"
+                  alt=""
+                />
+              </button>
+
+              <ul class="mt-8 flex flex-col">
+                <li class="py-2">
                   <span
-                    @click="triggerNavItem('#about')"
+                    @click="triggerMobileNavItem('#about')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >About</span
-                  >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
+                  >git
                 </li>
 
-                <li class="group pl-6">
+                <li class="py-2">
                   <span
-                    @click="triggerNavItem('#services')"
+                    @click="triggerMobileNavItem('#services')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Technologies</span
+                    >Services</span
                   >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
                 </li>
 
-                <li class="group pl-6">
+                <li class="py-2">
                   <span
-                    @click="triggerNavItem('#portfolio')"
+                    @click="triggerMobileNavItem('#portfolio')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Portfolio</span
                   >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
                 </li>
 
-                <li class="group pl-6">
+                <li class="py-2">
                   <span
-                    @click="triggerNavItem('#work')"
+                    @click="triggerMobileNavItem('#clients')"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Clients</span
+                  >
+                </li>
+
+                <li class="py-2">
+                  <span
+                    @click="triggerMobileNavItem('#work')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Work</span
                   >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
                 </li>
 
-                <li class="group pl-6">
-                  <span class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
-                    <a href="https://wsjung0516.github.io/blog211112/">BLOG</a>
-                    </span>
-
+                <li class="py-2">
                   <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
+                    @click="triggerMobileNavItem('#statistics')"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Statistics</span
+                  >
                 </li>
 
-                <li class="group pl-6">
+                <li class="py-2">
                   <span
-                    @click="triggerNavItem('#contact')"
+                    @click="triggerMobileNavItem('#blog')"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Blog</span
+                  >
+                </li>
+
+                <li class="py-2">
+                  <span
+                    @click="triggerMobileNavItem('#contact')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Contact</span
                   >
-
-                  <span
-                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                  ></span>
                 </li>
               </ul>
             </div>
-            <div class="block lg:hidden">
-              <button @click="mobileMenu = true">
-                <i class="bx bx-menu text-4xl text-white"></i>
-              </button>
-            </div>
           </div>
-        </div>
-
-        <div
-          class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
-          :class="{ 'opacity-100 pointer-events-auto': mobileMenu }"
-        >
-          <div
-            class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
-          >
-            <button
-              class="absolute top-0 right-0 mt-4 mr-4"
-              @click="mobileMenu = false"
-            >
-              <img
-                src="assets/img/icon-close.svg"
-                class="h-10 w-auto"
-                alt=""
-              />
-            </button>
-
-            <ul class="mt-8 flex flex-col">
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#about')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >About</span
-                >git
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#services')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Services</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#portfolio')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Portfolio</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#clients')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Clients</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#work')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Work</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#statistics')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Statistics</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#blog')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Blog</span
-                >
-              </li>
-
-              <li class="py-2">
-                <span
-                  @click="triggerMobileNavItem('#contact')"
-                  class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                  >Contact</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="relative bg-cover bg-center bg-no-repeat py-8"
-          style="background-image: url(assets/img/bg-hero.jpg)"
-        >
-          <div
-            class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"
-          ></div>
 
           <div
-            class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48"
-          >
-            <div class="flex flex-col items-center justify-center lg:flex-row">
-              <div class="rounded-full border-8 border-primary shadow-xl">
-                <img
-                  src="assets/img/my-photo20220903.jpg"
-                  class="h-48 rounded-full sm:h-56"
-                  alt="author"
-                />
-              </div>
-              <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
-                <h1
-                  class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
-                >
-                  Hello I'm Wonsup Jung!
-                </h1>
-                <div
-                  class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-grey-50" id="about">
-          <div
-            class="container flex flex-col items-center py-16 md:py-20 lg:flex-row"
-          >
-            <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
-              <h2
-                class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-              >
-                Who am I?
-              </h2>
-              <h4
-                class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-              >
-                I'm Wonsup Jung, a Web Programer
-              </h4>
-              <p class="pt-6 font-body leading-relaxed text-grey-20 text-xl">
-                Angular enthusiast, passionate about developer experience and
-                learning new things.
-              </p>
-              <p class="pt-6 font-body leading-relaxed text-grey-20">
-                Since childhood, I have been fond of making things, so I like
-                programs very much. When I was working at Samsung, I was working
-                in a department where I couldn’t control the software program at will.
-                After retirement, I started learning the software program again. It was
-                not easy to start because there was a gap of about 20 years, but
-                I was able to start again because programming was fun. I am
-                older now, but I love programming. I want to get a job because I
-                want to go to a place where I can show off my skills and make
-                good products. So, I want to be rewarded by making what the
-                company needs. The thing that worries me the most while
-                programming is user convenience and maintainability. I am always
-                studying to solve these problems more efficiently and quickly. I
-                read Medium Daily Digest and latest technology magazine  every morning.
-
-                <br/><br/>
-                Although English is not a native language and it is not natural for 
-                language communication, reading English is not difficult and the 
-                translation software is good, so I think that communication problems 
-                between team members become more natural over time.
-              </p>
-            </div>
-            <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
-              <div>
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    Angular
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">90%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 90%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    RxJS
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">75%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 80%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    Tailwindcss
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">55%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 65%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    Cypress (e2e)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">45%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    NgXs (Angular State Management)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">80%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 85%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    Spectator (Angular Test Driven Development)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">55%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 55%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    Github Action (CI/CD)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">50%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    AWS (ECS, ECR, Cluster...)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">45%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 55%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    DOCKER
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">50%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    NESTJS (Backend)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">50%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    PRISMA (BACKEND ORM)
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">50%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 50%"
-                  ></div>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="flex items-end justify-between">
-                  <h4 class="font-body font-semibold uppercase text-black">
-                    MYSQL
-                  </h4>
-                  <h3 class="font-body text-3xl font-bold text-primary">30%</h3>
-                </div>
-                <div class="mt-1 h-3 w-full rounded-full bg-lila">
-                  <div
-                    class="h-3 rounded-full bg-primary"
-                    style="width: 30%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container py-16 md:py-20" id="services">
-          <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-          >
-            Here's what I'm good at
-          </h2>
-          <h3
-            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-          >
-            These are the technologies
-          </h3>
-          <div
-            class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+            class="relative bg-cover bg-center bg-no-repeat py-8"
+            style="background-image: url(assets/img/bg-hero.jpg)"
           >
             <div
-              class="group rounded px-8 py-12 shadow hover:bg-primary"
-              
+              class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"
+            ></div>
+
+            <div
+              class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48"
             >
-            <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-angular" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-angular" class="modal-toggle" />
-                <label for="my-modal-angular" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Angular</h3>
-                    <p class="py-4 text-left">It's a frontend programming tool I'm proud to be able to use Angular well. 
-                      Although it is difficult and time consuming to learn at first, once you learn it, 
-                      you can build the program as if you were assembling a Lego, 
-                      and the deeper you understand it, the more fun it becomes.
-                      <br/><br/>
-                      Because it is a framework, it has the issue of having to learn various 
-                      basic techniques and getting used to it, 
-                      but I think it is a very suitable tool to carry out a large-scale project.
-                      <br/><br/>
-                      In 2016, from the release of Angular 2 to the current version of Angular 14, 
-                      I can say that I have tried almost every feature of Angular. 
-                      Although some features of the CDK have not yet been applied.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img src="assets/img/angular2.svg" alt="development icon" />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img src="assets/img/angular2.png" alt="development icon" />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Angular
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Angular 2 ~ Angular 14.<br />
-                  The modern web developer's platform
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-rxjs" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-rxjs" class="modal-toggle" />
-                <label for="my-modal-rxjs" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">RxJS</h3>
-                    <p class="py-4 text-left">RxJS, which contains an unfamiliar concept of Observable, 
-                      will actually be a difficult concept for developers. 
-                      This is because the way of thinking must be different from the existing program method. 
-                      When I first learned a new tool called Angular, 
-                      the concept itself was not easy, but RxJS was really an ambush. 
-                      I probably would have given up if the Angular Framework didn't use RxJS by default.
-                      But RxJS is a really attractive library. 
-                      If you are a program developer, I would definitely recommend you to learn.
-                      I am programming by applying RxJS as much as possible during program development.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
+              <div
+                class="flex flex-col items-center justify-center lg:flex-row"
+              >
+                <div class="rounded-full border-8 border-primary shadow-xl">
                   <img
-                    src="assets/img/rxjs.svg"
-                    alt="content marketing icon"
+                    src="assets/img/my-photo20220903.jpg"
+                    class="h-48 rounded-full sm:h-56"
+                    alt="author"
                   />
                 </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/rxjs.jpg"
-                    alt="content marketing icon"
-                  />
+                <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+                  <h1
+                    class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
+                  >
+                    Hello I'm Wonsup Jung!
+                  </h1>
+                  <div
+                    class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
+                  ></div>
                 </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  RxJS
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  An API for asynchronous programming with observable streams
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-tailwind" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-tailwind" class="modal-toggle" />
-                <label for="my-modal-tailwind" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Tailwindcss</h3>
-                    <p class="py-4 text-left">CSS is also a big topic for front end developers. 
-                      Currently, there are several commercialized css libraries, 
-                      but I think tailwind css is the most systematic and consistent 
-                      application for developers. Although I did not use it from the beginning, 
-                      I went through a lot of trial and error during css programming, 
-                      but now I have tailwind css, so when programming, only tailwind css is applied to development.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/tailwind.svg"
-                    alt="Mobile Application icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/tailwind.png"
-                    alt="Mobile Application icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Tailwind
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Tailwind CSS is an open source CSS framework.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-cypress" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-cypress" class="modal-toggle" />
-                <label for="my-modal-cypress" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Cypress</h3>
-                    <p class="py-4 text-left">At one time, I had experience applying the Storybook library to UI program development. 
-                      In order to develop the user interface and business logic separately, 
-                      I thought that the Storybook library was very useful. However, when the project actually started, 
-                      there were a lot of cumbersome tasks to program by applying the Storybook.
-                      So, rather than applying a Storybook, I thought that I would apply Cypress to the project more precisely.<br/><br/>
-                      When the program development is completed and deployed, the e2e test tool is essential to determine whether 
-                      the program operates normally as it originally intended by performing the UI part test.
-                      Although testing for Business Logic is important, e2e test tool is essential to determine whether 
-                      the program operates normally.
-                      <br/><br/>
-                      It has not yet been applied in the actual program, and I have experience applying 
-                      it only to the sample program, but I believe that there will be no major problems 
-                      in applying it to future projects because I have sufficiently practiced the test.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/cypress.svg"
-                    alt="Email Marketing icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/cypress.jpg"
-                    alt="Email Marketing icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Cypress
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Cypress is the new standard in front-end testing.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-ngxs" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-ngxs" class="modal-toggle" />
-                <label for="my-modal-ngxs" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">NgXS</h3>
-                    <p class="py-4 text-left">In the case of frontend program, if the size of the program grows, 
-                      the state management of all modules of the program becomes too complicated only with simple 
-                      program logic without applying the state management library. This makes the maintenance cost too high.
-                      <br/><br/>State management called NgRX is widely used for the Angular framework. However, 
-                      since this product was simply introduced as a state management method of React library, which is introduced by Facebook, 
-                      it is complicated to use and there are a lot of unnecessary coding work, so it is not easy for novice users to apply.
-                      <br/><br/>To overcome these shortcomings, a library of state management programs dedicated to Angular called NgXS was created.
-                      I use NgXS for all programs to manage the state.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img src="assets/img/ngxs.svg" alt="Graphic Design icon" />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img src="assets/img/ngxs.png" alt="Graphic Design icon" />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  NGXS
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  NGXS is a state management pattern + library for Angular.
-                </p>
-              </div>
-            </div>
-
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-spectator" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-spectator" class="modal-toggle" />
-                <label for="my-modal-spectator" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Spectator</h3>
-                    <p class="py-4 text-left">For developers, unit tests are inevitable. To be good at test programs is 
-                      to learn more than the basic knowledge to learn development programs, 
-                      so it can be said that being good at test programs has very experienced skills.
-                      <br/><br/>  
-                      To test the Angular project, you can apply Jasmine and Karma, which are provided by default, 
-                      or you can use Jest, which is applied and used in React, which is introduced by Facebook. These programs have too many secondary 
-                      program coding and too many skills to learn, so the reverse phenomenon may occur in which 
-                      the test program work becomes more complicated than the actual development program.
-                      <br/><br/>
-                      In this aspect, Spectator, an Angular-only test program, requires less additional coding 
-                      and is much easier to apply than other libraries because it requires less additional learning.
-                      I plan to write a unit test program by applying Spectator to all projects in the future.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/spectator.svg"
-                    alt="Theme Design icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/spectator.jpg"
-                    alt="Theme Design icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Spectator
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Spectator helps you get rid of all the boilerplate grunt work
-                  for TDD.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-github" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-github" class="modal-toggle" />
-                <label for="my-modal-github" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Github Action</h3>
-                    <p class="py-4 text-left">At one time, I applied Jenkins to my project. 
-                      Jenkins basically requires Linux OS, and it works only after installing Java and then Jenkins. 
-                      Then, the CI/CD work proceeds by configuring the pipeline. 
-                      Of course, these tasks can be performed using Docker, but once setting tasks such as Linux OS, 
-                      Java, and Jenkins versions are also burdensome for developers. 
-                      So I applied Github Action to the project. Compared to Jenkins, 
-                      Github Action is a suitable method for implementing CI/CD because the environment 
-                      configuration is very simple and you can learn how to use it easily. 
-                      And I plan to apply this method to other projects in the future.
-
-                    </p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/github-action.svg"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/github-action.png"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Github action
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  GitHub Actions makes it easy to automate all your software
-                  workflows, now with world-class CI/CD. Build, test, and
-                  deployt.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-aws" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-aws" class="modal-toggle" />
-                <label for="my-modal-aws" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">AWS Web Service</h3>
-                    <p class="py-4 text-left">
-                      I have experience using AWS Web Service for CI/CD. For this purpose, 
-                      Docker Container is applied.
-                      
-                      <br/><br/>
-                      <a href="https://wsjung0516.github.io/ci-cd-start/"><span class="text-primary cursor-pointer">Details</span></a>
-                    </p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/aws-webservice.svg"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/aws-webservice.png"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  AWS web Service
-                </h3>
-                <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  AWS web services provide distributed computing processing
-                  capacity and software tools via AWS server farms.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-docker" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-docker" class="modal-toggle" />
-                <label for="my-modal-docker" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Docker</h3>
-                    <p class="py-4 text-left">When developing a frontend program, 
-                      a backend program can be developed as a mockup, 
-                      but it is more efficient to use Docker to create and apply an environment like an actual project.
-                      In fact, I have experience in developing the backend environment using MySQL and Nestjs using Docker.
-                      <br/><br/>
-                      And I have experience in deploying the developed program to 
-                      AWS Web Service by creating Docker containers for all frontend, backend, and database.
-                      <br/><br/>
-                      <a href="https://wsjung0516.github.io/ci-cd-start/"><span class="text-primary cursor-pointer">Details</span></a>
-                    </p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img
-                    src="assets/img/docker1.svg"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img
-                    src="assets/img/docker1.png"
-                    alt="Graphic Design icon"
-                  />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Docker
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Docker can package an application and its dependencies in a
-                  virtual container that can run on any OS computer.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-nest" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-nest" class="modal-toggle" />
-                <label for="my-modal-nest" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Nestjs</h3>
-                    <p class="py-4 text-left">Nestjs program structure is almost identical to Angular. 
-                      At first, I was not very interested in this product, 
-                      and I simply wrote a backend server program using the express library. 
-                      But gradually nestjs became more and more popular, and when I first encountered it, 
-                      the program structure was the same as that of Angular, so I immediately applied it to the project and used it.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img src="assets/img/nestjs.svg" alt="Graphic Design icon" />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img src="assets/img/nestjs.png" alt="Graphic Design icon" />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Nestjs
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Nest.js is a server-side framework, which is based on Nodejs, that's great for
-                  building highly testable and maintainable backend
-                  applications.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-prisma" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-prisma" class="modal-toggle" />
-                <label for="my-modal-prisma" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">Prisma</h3>
-                    <p class="py-4 text-left">Prisma is easy to program, 
-                      and it is easy to create a schema in an existing database, 
-                      and when modifying a schema, it is well applied to the database, 
-                      so I have experience in project using Prisma.
-                      In my personal experience, it was much more comfortable than other ORM, 
-                      and there are many functions without requiring any admin coding, so the work became very easy.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img src="assets/img/prisma.svg" alt="Graphic Design icon" />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img src="assets/img/prisma.png" alt="Graphic Design icon" />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Prisma
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  Prisma is a next-generation Node.js and TypeScript ORM for RDB
-                  and NoSQL.
-                </p>
-              </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                <!-- The button to open modal -->
-                <label for="my-modal-mysql" class=""><span class=" text-white cursor-pointer">Details</span></label>
-                
-                <input type="checkbox" id="my-modal-mysql" class="modal-toggle" />
-                <label for="my-modal-mysql" class="modal cursor-pointer">
-                  <label class="modal-box relative" for="">
-                    <h3 class="text-lg font-bold">MySQL</h3>
-                    <p class="py-4 text-left">Although I do not have the skills to design and optimize the 
-                      relation diagram of RDBMS myself, 
-                      I have the ability to understand the basic structure of the database and apply it to the program.
-                      In fact, in many projects, I developed by connecting with the Frontend program through Rest API.</p>
-                  </label>
-                </label>
-                <!-- modal end -->
-                <div class="hidden group-hover:block">
-                  <img src="assets/img/mysql.svg" alt="Graphic Design icon" />
-                </div>
-                <div class="block group-hover:hidden">
-                  <img src="assets/img/mysql.png" alt="Graphic Design icon" />
-                </div>
-              </div>
-              <div class="text-center">
-                <h3
-                  class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                >
-                  Mysql
-                </h3>
-                <p
-                  class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
-                >
-                  MySQL is an open-source relational database management system
-                  (RDBMS).
-                </p>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="container py-16 md:py-20" id="portfolio">
-          <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-          >
-            Check out my Portfolio
-          </h2>
-          <h3
-            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-          >
-            Here's what I have done with the past
-          </h3>
+          <div class="bg-grey-50" id="about">
+            <div
+              class="container flex flex-col items-center py-16 md:py-20 lg:flex-row"
+            >
+              <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+                <h2
+                  class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+                >
+                  Who am I?
+                </h2>
+                <h4
+                  class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+                >
+                  I'm Wonsup Jung, a Web Programer
+                </h4>
+                <p class="pt-6 font-body leading-relaxed text-grey-20 text-xl">
+                  Angular enthusiast, passionate about developer experience and
+                  learning new things.
+                </p>
+                <p class="pt-6 font-body leading-relaxed text-grey-20">
+                  Since childhood, I have been fond of making things, so I like
+                  programs very much. When I was working at Samsung, I was
+                  working in a department where I couldn’t control the software
+                  program at will. After retirement, I started learning the
+                  software program again. It was not easy to start because there
+                  was a gap of about 20 years, but I was able to start again
+                  because programming was fun. I am older now, but I love
+                  programming. I want to get a job because I want to go to a
+                  place where I can show off my skills and make good products.
+                  So, I want to be rewarded by making what the company needs.
+                  The thing that worries me the most while programming is user
+                  convenience and maintainability. I am always studying to solve
+                  these problems more efficiently and quickly. I read Medium
+                  Daily Digest and latest technology magazine every morning.
 
-          <div
-            class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
-          >
-            <a href="https://wsjung0516.github.io/monitor/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img
-                src="assets/img/monitor-image.png"
-                class="w-full shadow"
-                alt="portfolio image"
-              />
-            </a>
-            <a href="https://wsjung0516.github.io/blog211112/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img
-                src="assets/img/split-window.png"
-                class="w-full shadow"
-                alt="portfolio image"
-              />
-            </a>
-            <a href="https://wsjung0516.github.io/blog211112/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img
-                src="assets/img/pizza-order220304.png"
-                class="w-full shadow"
-                alt="portfolio image"
-              />
-            </a>
-            <a href="https://wsjung0516.github.io/blog211112/"
-              class="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img
-                src="assets/img/ocr-element.png"
-                class="w-full shadow"
-                alt="portfolio image"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div class="container py-16 md:py-20" id="work">
-          <h2
-            class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-          >
-            My work experience
-          </h2>
-          <h3
-            class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-          >
-            Here's what I did projects in the Korea before settling in the US
-          </h3>
-
-          <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
-            <span
-              class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"
-            ></span>
-            <!-- SK & C -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/skc&C-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
+                  <br /><br />
+                  Although English is not a native language and it is not
+                  natural for language communication, reading English is not
+                  difficult and the translation software is good, so I think
+                  that communication problems between team members become more
+                  natural over time.
+                </p>
+              </div>
+              <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+                <div>
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Angular
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      90%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      RxJS
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      75%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Tailwindcss
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      55%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 65%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Cypress (e2e)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      45%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      NgXs (Angular State Management)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      80%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Spectator (Angular Test Driven Development)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      55%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 55%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      Github Action (CI/CD)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      50%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      AWS (ECS, ECR, Cluster...)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      45%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 55%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      DOCKER
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      50%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      NESTJS (Backend)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      50%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      PRISMA (BACKEND ORM)
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      50%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="flex items-end justify-between">
+                    <h4 class="font-body font-semibold uppercase text-black">
+                      MYSQL
+                    </h4>
+                    <h3 class="font-body text-3xl font-bold text-primary">
+                      30%
+                    </h3>
+                  </div>
+                  <div class="mt-1 h-3 w-full rounded-full bg-lila">
+                    <div
+                      class="h-3 rounded-full bg-primary"
+                      style="width: 30%"
+                    ></div>
                   </div>
                 </div>
               </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
+            </div>
+          </div>
 
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Feb 1991 - Mar 1995 (4 years, 2 Months)</span>
+          <div class="container py-16 md:py-20" id="services">
+            <h2
+              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+            >
+              Here's what I'm good at
+            </h2>
+            <h3
+              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+            >
+              These are the technologies
+            </h3>
+            <div
+              class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
+            >
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-angular" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-angular"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-angular" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Angular</h3>
+                      <p class="py-4 text-left">
+                        It's a frontend programming tool I'm proud to be able to
+                        use Angular well. Although it is difficult and time
+                        consuming to learn at first, once you learn it, you can
+                        build the program as if you were assembling a Lego, and
+                        the deeper you understand it, the more fun it becomes.
+                        <br /><br />
+                        Because it is a framework, it has the issue of having to
+                        learn various basic techniques and getting used to it,
+                        but I think it is a very suitable tool to carry out a
+                        large-scale project.
+                        <br /><br />
+                        In 2016, from the release of Angular 2 to the current
+                        version of Angular 14, I can say that I have tried
+                        almost every feature of Angular. Although some features
+                        of the CDK have not yet been applied.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img src="assets/img/angular2.svg" alt="development icon" />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img src="assets/img/angular2.png" alt="development icon" />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Angular
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Angular 2 ~ Angular 14.<br />
+                    The modern web developer's platform
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-rxjs" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-rxjs"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-rxjs" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">RxJS</h3>
+                      <p class="py-4 text-left">
+                        RxJS, which contains an unfamiliar concept of
+                        Observable, will actually be a difficult concept for
+                        developers. This is because the way of thinking must be
+                        different from the existing program method. When I first
+                        learned a new tool called Angular, the concept itself
+                        was not easy, but RxJS was really an ambush. I probably
+                        would have given up if the Angular Framework didn't use
+                        RxJS by default. But RxJS is a really attractive
+                        library. If you are a program developer, I would
+                        definitely recommend you to learn. I am programming by
+                        applying RxJS as much as possible during program
+                        development.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/rxjs.svg"
+                      alt="content marketing icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/rxjs.jpg"
+                      alt="content marketing icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    RxJS
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    An API for asynchronous programming with observable streams
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-tailwind" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-tailwind"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-tailwind" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Tailwindcss</h3>
+                      <p class="py-4 text-left">
+                        CSS is also a big topic for front end developers.
+                        Currently, there are several commercialized css
+                        libraries, but I think tailwind css is the most
+                        systematic and consistent application for developers.
+                        Although I did not use it from the beginning, I went
+                        through a lot of trial and error during css programming,
+                        but now I have tailwind css, so when programming, only
+                        tailwind css is applied to development.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/tailwind.svg"
+                      alt="Mobile Application icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/tailwind.png"
+                      alt="Mobile Application icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Tailwind
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Tailwind CSS is an open source CSS framework.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-cypress" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-cypress"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-cypress" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Cypress</h3>
+                      <p class="py-4 text-left">
+                        Cypress creates and uses a separate driver that can
+                        handle the browser, and it is possible to use not only
+                        E2E tests, but also unit tests and integration tests. It
+                        supports GUI tools, and specification management and
+                        debugging are convenient. It has the advantage of
+                        quickly testing problems that can be encountered from
+                        the user's point of view during development. It can be
+                        checked much faster than manually testing, which is
+                        really good for efficiency.
+                        <br /><br />
+                        It has not yet been applied in the actual program, and I
+                        have experience applying it only to the sample program,
+                        but I believe that there will be no major problems in
+                        applying it to future projects because I have
+                        sufficiently practiced the test.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/cypress.svg"
+                      alt="Email Marketing icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/cypress.jpg"
+                      alt="Email Marketing icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Cypress
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Cypress is the new standard in front-end testing.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-ngxs" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-ngxs"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-ngxs" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">NgXS</h3>
+                      <p class="py-4 text-left">
+                        In the case of frontend program, if the size of the
+                        program grows, the state management of all modules of
+                        the program becomes too complicated only with simple
+                        program logic without applying the state management
+                        library. This makes the maintenance cost too high.
+                        <br /><br />State management called NgRX is widely used
+                        for the Angular framework. However, since this product
+                        was simply introduced as a state management method of
+                        React library, which is introduced by Facebook, it is
+                        complicated to use and there are a lot of unnecessary
+                        coding work, so it is not easy for novice users to
+                        apply. <br /><br />To overcome these shortcomings, a
+                        library of state management programs dedicated to
+                        Angular called NgXS was created. I use NgXS for all
+                        programs to manage the state.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img src="assets/img/ngxs.svg" alt="Graphic Design icon" />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img src="assets/img/ngxs.png" alt="Graphic Design icon" />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    NGXS
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    NGXS is a state management pattern + library for Angular.
+                  </p>
+                </div>
+              </div>
+
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-spectator" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-spectator"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-spectator" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Spectator</h3>
+                      <p class="py-4 text-left">
+                        For developers, unit tests are inevitable. To be good at
+                        test programs is to learn more than the basic knowledge
+                        to learn development programs, so it can be said that
+                        being good at test programs has very experienced skills.
+                        <br /><br />
+                        To test the Angular project, you can apply Jasmine and
+                        Karma, which are provided by default, or you can use
+                        Jest, which is applied and used in React, which is
+                        introduced by Facebook. These programs have too many
+                        secondary program coding and too many skills to learn,
+                        so the reverse phenomenon may occur in which the test
+                        program work becomes more complicated than the actual
+                        development program.
+                        <br /><br />
+                        In this aspect, Spectator, an Angular-only test program,
+                        requires less additional coding and is much easier to
+                        apply than other libraries because it requires less
+                        additional learning. I plan to write a unit test program
+                        by applying Spectator to all projects in the future.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/spectator.svg"
+                      alt="Theme Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/spectator.jpg"
+                      alt="Theme Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Spectator
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Spectator helps you get rid of all the boilerplate grunt
+                    work for TDD.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-github" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-github"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-github" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Github Action</h3>
+                      <p class="py-4 text-left">
+                        At one time, I applied Jenkins to my project. Jenkins
+                        basically requires Linux OS, and it works only after
+                        installing Java and then Jenkins. Then, the CI/CD work
+                        proceeds by configuring the pipeline. Of course, these
+                        tasks can be performed using Docker, but once setting
+                        tasks such as Linux OS, Java, and Jenkins versions are
+                        also burdensome for developers. So I applied Github
+                        Action to the project. Compared to Jenkins, Github
+                        Action is a suitable method for implementing CI/CD
+                        because the environment configuration is very simple and
+                        you can learn how to use it easily. And I plan to apply
+                        this method to other projects in the future.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/github-action.svg"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/github-action.png"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Github action
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    GitHub Actions makes it easy to automate all your software
+                    workflows, now with world-class CI/CD. Build, test, and
+                    deployt.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-aws" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-aws"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-aws" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">AWS Web Service</h3>
+                      <p class="py-4 text-left">
+                        I have experience using AWS Web Service for CI/CD. For
+                        this purpose, Docker Container is applied.
+
+                        <br /><br />
+                        <a href="https://wsjung0516.github.io/ci-cd-start/"
+                          ><span class="text-primary cursor-pointer"
+                            >Details</span
+                          ></a
+                        >
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/aws-webservice.svg"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/aws-webservice.png"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    AWS web Service
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    AWS web services provide distributed computing processing
+                    capacity and software tools via AWS server farms.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-docker" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-docker"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-docker" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Docker</h3>
+                      <p class="py-4 text-left">
+                        When developing a frontend program, a backend program
+                        can be developed as a mockup, but it is more efficient
+                        to use Docker to create and apply an environment like an
+                        actual project. In fact, I have experience in developing
+                        the backend environment using MySQL and Nestjs using
+                        Docker. <br /><br />
+                        And I have experience in deploying the developed program
+                        to AWS Web Service by creating Docker containers for all
+                        frontend, backend, and database.
+                        <br /><br />
+                        <a href="https://wsjung0516.github.io/ci-cd-start/"
+                          ><span class="text-primary cursor-pointer"
+                            >Details</span
+                          ></a
+                        >
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/docker1.svg"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/docker1.png"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Docker
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Docker can package an application and its dependencies in a
+                    virtual container that can run on any OS computer.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-nest" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-nest"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-nest" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Nestjs</h3>
+                      <p class="py-4 text-left">
+                        Nestjs program structure is almost identical to Angular.
+                        At first, I was not very interested in this product, and
+                        I simply wrote a backend server program using the
+                        express library. But gradually nestjs became more and
+                        more popular, and when I first encountered it, the
+                        program structure was the same as that of Angular, so I
+                        immediately applied it to the project and used it.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/nestjs.svg"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/nestjs.png"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Nestjs
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Nest.js is a server-side framework, which is based on
+                    Nodejs, that's great for building highly testable and
+                    maintainable backend applications.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-prisma" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-prisma"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-prisma" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">Prisma</h3>
+                      <p class="py-4 text-left">
+                        Prisma is easy to program, and it is easy to create a
+                        schema in an existing database, and when modifying a
+                        schema, it is well applied to the database, so I have
+                        experience in project using Prisma. In my personal
+                        experience, it was much more comfortable than other ORM,
+                        and there are many functions without requiring any admin
+                        coding, so the work became very easy.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img
+                      src="assets/img/prisma.svg"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img
+                      src="assets/img/prisma.png"
+                      alt="Graphic Design icon"
+                    />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Prisma
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    Prisma is a next-generation Node.js and TypeScript ORM for
+                    RDB and NoSQL.
+                  </p>
+                </div>
+              </div>
+              <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                  <!-- The button to open modal -->
+                  <label for="my-modal-mysql" class=""
+                    ><span class="text-white cursor-pointer"
+                      >Details</span
+                    ></label
+                  >
+
+                  <input
+                    type="checkbox"
+                    id="my-modal-mysql"
+                    class="modal-toggle"
+                  />
+                  <label for="my-modal-mysql" class="modal cursor-pointer">
+                    <label class="modal-box relative" for="">
+                      <h3 class="text-lg font-bold">MySQL</h3>
+                      <p class="py-4 text-left">
+                        Although I do not have the skills to design and optimize
+                        the relation diagram of RDBMS myself, I have the ability
+                        to understand the basic structure of the database and
+                        apply it to the program. In fact, in many projects, I
+                        developed by connecting with the Frontend program
+                        through Rest API.
+                      </p>
+                    </label>
+                  </label>
+                  <!-- modal end -->
+                  <div class="hidden group-hover:block">
+                    <img src="assets/img/mysql.svg" alt="Graphic Design icon" />
+                  </div>
+                  <div class="block group-hover:hidden">
+                    <img src="assets/img/mysql.png" alt="Graphic Design icon" />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3
+                    class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
+                  >
+                    Mysql
+                  </h3>
+                  <p
+                    class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
+                  >
+                    MySQL is an open-source relational database management
+                    system (RDBMS).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container py-16 md:py-20" id="portfolio">
+            <h2
+              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+            >
+              Check out my Portfolio
+            </h2>
+            <h3
+              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+            >
+              Here's what I have done with the past
+            </h3>
+
+            <div
+              class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
+            >
+              <a
+                href="https://wsjung0516.github.io/monitor/"
+                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+              >
+                <img
+                  src="assets/img/monitor-image.png"
+                  class="w-full shadow"
+                  alt="portfolio image"
+                />
+              </a>
+              <a
+                href="https://wsjung0516.github.io/blog211112/"
+                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+              >
+                <img
+                  src="assets/img/split-window.png"
+                  class="w-full shadow"
+                  alt="portfolio image"
+                />
+              </a>
+              <a
+                href="https://wsjung0516.github.io/blog211112/"
+                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+              >
+                <img
+                  src="assets/img/pizza-order220304.png"
+                  class="w-full shadow"
+                  alt="portfolio image"
+                />
+              </a>
+              <a
+                href="https://wsjung0516.github.io/blog211112/"
+                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+              >
+                <img
+                  src="assets/img/ocr-element.png"
+                  class="w-full shadow"
+                  alt="portfolio image"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="container py-16 md:py-20" id="work">
+            <h2
+              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+            >
+              My work experience
+            </h2>
+            <h3
+              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+            >
+              Here's what I did projects in the Korea before settling in the US
+            </h3>
+
+            <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
+              <span
+                class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"
+              ></span>
+              <!-- SK & C -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/skc&C-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
                       <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Application Programmer</span>
-                      <div class="pt-2">
-                        <span class="block font-body text-black">
-                          Program Language: C, C++<br/>
-                          Role: Application Programmer<br/>
-                          Work: Factory Automation System, Programmed UI and application program for SK Oil Company
-                        </span>
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Feb 1991 - Mar 1995 (4 years, 2 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Application Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: C, C++<br />
+                            Role: Application Programmer<br />
+                            Work: Factory Automation System, Programmed UI and
+                            application program for SK Oil Company
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SAMSUNG SDS  -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/samsung-sds-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Apr 1995 - May 1997 (2 Years 1 Month)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Application Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Language: C, C++ Role: Application Programmer
+                            Project Leader, Project manager Work: Programmed
+                            Factory Automation program for Samsung affiliates
+                            (Goods Inventory Management System).
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SAMSUNG SDS  -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/samsung-sds-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Jun 1997 - May 2014 (17 years)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Project Leader, Project Manager</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Role: Project Leader, Project Manager Work: SI(
+                            System Integration) Project Management
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- WEEDS KOREA -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/weeds-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >May 2015 - Nov 2015 (6 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Solution Project Manager</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: Java, Spring<br />
+                            Role: Manager for solution project<br />
+                            Work: Management Solution Project (Personal
+                            Information Protection System)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- DOSA NET -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/dosa-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Dec 2015 - Jun 2016 (7 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Application Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: Java, Spring<br />
+                            Role: Frontend Programmer<br />
+                            Work: Management and development solution
+                            product.(Personal Information Protection System)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Tryus&Company -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/umsun-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >July 2017 - Sep 2017 (3 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Intern Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: Typescript, Angular<br />
+                            Role: Web Programmer<br />
+                            Work: Development Homepage, Development Dashboard
+                            (Food nutrition information system)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- IGIS -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/igis-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Dec 2017 - Mar 2018 (4 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: Typescript, Angular<br />
+                            Role: Web Programmer<br />
+                            Work: Development Homepage, Development Ionic
+                            application
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- T3Q -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/t3q-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >May 2018 - July 2019 (1 Year, 2 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: typescript, Angular<br />
+                            Role: Web Solution Programmer<br />
+                            Work: Development Solution (Data analysis using
+                            artificial intelligence)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ICOOP -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/icoop-logo.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Sep 2019 - Nov 2019</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: typescript, Angular<br />
+                            Role: Web Programmer<br />
+                            Work: Remodeling current application program
+                            (Medical information prescription support system)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Monitor  -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5">
+                  <div class="flex justify-center md:justify-start">
+                    <span class="shrink-0">
+                      <img
+                        src="assets/img/monitor-coporation.png"
+                        class="h-auto w-32"
+                        alt="company logo"
+                      />
+                    </span>
+                    <div class="relative ml-3 hidden w-full md:block">
+                      <span
+                        class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Dec 2019 - Sep 2021 (1 Year, 10 Months)</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Program Language: typescript, Angular<br />
+                            Role: Application Programmer<br />
+                            Work: Development Solution (Lung cancer diagnosis
+                            system by using artificial intelligence)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Current  -->
+              <div
+                class="mt-8 flex flex-col text-center md:flex-row md:text-left"
+              >
+                <div class="md:w-2/5"></div>
+                <div class="md:w-3/5">
+                  <div class="relative flex md:pl-18">
+                    <span
+                      class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
+                    ></span>
+
+                    <div class="mt-1 flex">
+                      <i
+                        class="bx bxs-right-arrow hidden text-primary md:block"
+                      ></i>
+                      <div class="md:-mt-1 md:pl-8">
+                        <span class="block font-body font-bold text-grey-40"
+                          >Dec 2021 - Current</span
+                        >
+                        <span
+                          class="block pt-2 font-header text-xl font-bold uppercase text-primary"
+                          >Web Programmer</span
+                        >
+                        <div class="pt-2">
+                          <span class="block font-body text-black">
+                            Settling in the United States<br />
+                            Looking for a new job position.
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- SAMSUNG SDS  -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/samsung-sds-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Apr 1995 - May 1997 (2 Years 1 Month)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Application Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Language: C, C++
-                            Role: Application Programmer Project Leader, Project manager
-                            Work: Programmed Factory Automation program for Samsung affiliates (Goods Inventory Management System).                            </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- SAMSUNG SDS  -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/samsung-sds-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Jun 1997 - May 2014 (17 years)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Project Leader, Project Manager</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Role: Project Leader, Project Manager
-                            Work: SI( System Integration) Project Management                           </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- WEEDS KOREA -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/weeds-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >May 2015 - Nov 2015 (6 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Solution Project Manager</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: Java, Spring<br/>
-                            Role: Manager for solution project<br/>
-                            Work: Management Solution Project (Personal Information Protection System)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- DOSA NET -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/dosa-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Dec 2015 - Jun 2016 (7 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Application Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: Java, Spring<br/>
-                            Role: Frontend Programmer<br/>
-                            Work: Management and development solution product.(Personal Information Protection System)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Tryus&Company -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/umsun-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >July 2017 - Sep 2017 (3 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Intern Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: Typescript, Angular<br/>
-                            Role: Web Programmer<br/>
-                            Work: Development Homepage, Development Dashboard (Food nutrition information system)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- IGIS -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/igis-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Dec 2017 - Mar 2018 (4 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: Typescript, Angular<br/>
-                            Role: Web Programmer<br/>
-                            Work: Development Homepage, Development Ionic application
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- T3Q -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/t3q-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >May 2018 - July 2019 (1 Year, 2 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: typescript, Angular<br/>
-                            Role: Web Solution Programmer<br/>
-                            Work: Development Solution (Data analysis using artificial intelligence)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ICOOP -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/icoop-logo.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Sep 2019 - Nov 2019</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: typescript, Angular<br/>
-                            Role: Web Programmer<br/>
-                            Work: Remodeling current application program (Medical information prescription support system)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Monitor  -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
-                    <img src="assets/img/monitor-coporation.png"
-                      class="h-auto w-32"
-                      alt="company logo" />
-                  </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span
-                      class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Dec 2019 - Sep 2021 (1 Year, 10 Months)</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Program Language: typescript, Angular<br/>
-                            Role: Application Programmer<br/>
-                            Work: Development Solution (Lung cancer diagnosis system by using artificial intelligence)
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Current  -->
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-              </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span
-                    class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"
-                  ></span>
-
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40"
-                        >Dec 2021 - Current</span>
-                      <span
-                        class="block pt-2 font-header text-xl font-bold uppercase text-primary"
-                        >Web Programmer</span>
-                        <div class="pt-2">
-                          <span class="block font-body text-black">
-                            Settling in the United States<br/>
-                            Looking for a new job position.
-                          </span>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
-        <div class="container py-16 md:py-20" id="contact">
-          <div class="flex flex-col lg:flex-row">
-            <div
-              class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
-            >
-              <div class="flex items-center">
-                <i class="bx bx-phone text-2xl text-grey-40"></i>
-                <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
-                >
-                  My Phone
-                </p>
-              </div>
-              <p
-                class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+          <div class="container py-16 md:py-20" id="contact">
+            <div class="flex flex-col lg:flex-row">
+              <div
+                class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3"
               >
-                (+1) 213 548 1859
-              </p>
-            </div>
-            <div
-              class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
-            >
-              <div class="flex items-center">
-                <i class="bx bx-envelope text-2xl text-grey-40"></i>
+                <div class="flex items-center">
+                  <i class="bx bx-phone text-2xl text-grey-40"></i>
+                  <p
+                    class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                  >
+                    My Phone
+                  </p>
+                </div>
                 <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                  class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
                 >
-                  My Email
+                  (+1) 213 548 1859
                 </p>
               </div>
-              <p
-                class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+              <div
+                class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
               >
-                wonsup.jung@gmail.com
-              </p>
-            </div>
-            <div
-              class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
-            >
-              <div class="flex items-center">
-                <i class="bx bx-map text-2xl text-grey-40"></i>
+                <div class="flex items-center">
+                  <i class="bx bx-envelope text-2xl text-grey-40"></i>
+                  <p
+                    class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                  >
+                    My Email
+                  </p>
+                </div>
                 <p
-                  class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                  class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
                 >
-                  My Address
+                  wonsup.jung@gmail.com
                 </p>
               </div>
-              <p
-                class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+              <div
+                class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
+              >
+                <div class="flex items-center">
+                  <i class="bx bx-map text-2xl text-grey-40"></i>
+                  <p
+                    class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg"
+                  >
+                    My Address
+                  </p>
+                </div>
+                <p
+                  class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
                 >
-                3416 Manning Ave. LA. CA. USA
+                  3416 Manning Ave. LA. CA. USA
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-primary">
+            <div
+              class="container flex flex-col justify-between py-6 sm:flex-row"
+            >
+              <p class="text-center font-body text-white md:text-left">
+                © Copyright 2022. All right reserved, Wonsup Jung.
               </p>
             </div>
           </div>
         </div>
-
-      
-        
-        <div class="bg-primary">
-        <div class="container flex flex-col justify-between py-6 sm:flex-row">
-          <p class="text-center font-body text-white md:text-left">
-            © Copyright 2022. All right reserved, Wonsup Jung.
-          </p>
-        </div>
-      </div>
       </div>
     </div>
-
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-
   </body>
 </html>
