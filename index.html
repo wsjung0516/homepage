@@ -99,6 +99,20 @@
         }"
         >
           <div class="w-full z-50 top-0 py-3 sm:py-5 absolute">
+            <div class="m-4">
+              <button
+                onclick="changeLanguage('en')"
+                class="bg-primary hover:bg-blue-700 text-white text-sm font-bold px-4 rounded"
+              >
+                English
+              </button>
+              <button
+                onclick="changeLanguage('ko')"
+                class="bg-primary hover:bg-blue-700 text-white text-sm font-bold px-4 rounded"
+              >
+                한국어
+              </button>
+            </div>
             <div class="container flex items-center justify-between">
               <div>
                 <a href="/">
@@ -209,67 +223,76 @@
               </button>
 
               <ul class="mt-8 flex flex-col">
-                <li class="py-2">
+                <li class="group pl-6">
                   <span
-                    @click="triggerMobileNavItem('#about')"
+                    @click="triggerNavItem('#about')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >About</span>
-                </li>
-
-                <li class="py-2">
-                  <span
-                    @click="triggerMobileNavItem('#services')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Services</span
+                    >About</span
                   >
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
                 </li>
 
-                <li class="py-2">
+                <li class="group pl-6">
                   <span
-                    @click="triggerMobileNavItem('#portfolio')"
+                    @click="triggerNavItem('#services')"
+                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+                    >Technologies</span
+                  >
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
+                </li>
+
+                <li class="group pl-6">
+                  <span
+                    @click="triggerNavItem('#portfolio')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Portfolio</span
                   >
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
                 </li>
 
-                <li class="py-2">
+                <li class="group pl-6">
                   <span
-                    @click="triggerMobileNavItem('#clients')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Clients</span
-                  >
-                </li>
-
-                <li class="py-2">
-                  <span
-                    @click="triggerMobileNavItem('#work')"
+                    @click="triggerNavItem('#work')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Work</span
                   >
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
                 </li>
 
-                <li class="py-2">
+                <li class="group pl-6">
                   <span
-                    @click="triggerMobileNavItem('#statistics')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Statistics</span
                   >
+                    <a href="https://wsjung0516.github.io/blog211112/">BLOG</a>
+                  </span>
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
                 </li>
 
-                <li class="py-2">
+                <li class="group pl-6">
                   <span
-                    @click="triggerMobileNavItem('#blog')"
-                    class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-                    >Blog</span
-                  >
-                </li>
-
-                <li class="py-2">
-                  <span
-                    @click="triggerMobileNavItem('#contact')"
+                    @click="triggerNavItem('#contact')"
                     class="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
                     >Contact</span
                   >
+
+                  <span
+                    class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -296,11 +319,34 @@
                     alt="author"
                   />
                 </div>
-                <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+                <div
+                  class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0"
+                  en
+                  lang
+                  id="enContent"
+                >
                   <h1
                     class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
                   >
                     Hello I'm Wonsup Jung!
+                  </h1>
+                  <div
+                    class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
+                  ></div>
+                </div>
+                <div
+                  class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0"
+                  ko
+                  lang
+                  id="koContent"
+                >
+                  <h1
+                    class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
+                  >
+                    <span class="text-4xl"
+                      >안녕하세요? <br />
+                      정원섭 입니다!</span
+                    >
                   </h1>
                   <div
                     class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
@@ -314,7 +360,12 @@
             <div
               class="container flex flex-col items-center py-16 md:py-20 lg:flex-row"
             >
-              <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+              <div
+                class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left"
+                en
+                lang
+                id="enContent1"
+              >
                 <h2
                   class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
                 >
@@ -345,12 +396,92 @@
                   these problems more efficiently and quickly. I read Medium
                   Daily Digest and latest technology magazine every morning.
 
+
+                  <br /><br />
+                  Through these efforts, I want to apply the skills and
+                  experience I have learned to real-world tasks. Though I have
+                  surpassed the age of 60, it does not hinder my passion or my
+                  will to learn. Rather, I've gained mature judgment and
+                  problem-solving abilities through various experiences and
+                  periods of my life. I believe I can lead the company's
+                  projects to success through collaboration with other
+                  developers. I can conduct daily meetings and communicate
+                  smoothly with team members without any problem, and my
+                  seasoned approach will add new value and perspectives to the
+                  company. As age has granted me greater insight and depth, I am
+                  confident that there will be no difficulties in meeting the
+                  competencies required by the company. My strong determination
+                  to fulfill my responsibilities and create better outcomes
+                  through collaboration with the company and colleagues is
+                  unwavering. Lastly, I believe that my age and experience will
+                  further enhance the diversity and rich culture of the company,
+                  serve as a bridge between different generations, and
+                  contribute to the derivation of innovative ideas. I hope that
+                  my passion and expertise in my work can positively impact the
+                  future growth of the company. 
                   <br /><br />
                   Although English is not a native language and it is not
                   natural for language communication, reading English is not
                   difficult and the translation software is good, so I think
                   that communication problems between team members become more
                   natural over time.
+                  <br />
+                  Thank you.
+                </p>
+              </div>
+              <div
+                class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left"
+                ko
+                lang
+                id="koContent1"
+              >
+                <!-- <h2
+                  class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+                >
+                  나는 누구인가?
+                </h2> -->
+                <h4
+                  class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+                >
+                  저는 Web Programer 입니다.
+                </h4>
+                <p class="pt-6 font-body leading-relaxed text-grey-20 text-xl">
+                  저는 Angular 옹호자 입니다. 개발자 경험과 새로운 것을 배우는
+                  것에 열정적입니다.
+                </p>
+                <p class="pt-6 font-body leading-relaxed text-grey-20">
+                  어린시절부터, 저는 무언가를 만드는 것을 좋아해서 프로그램을
+                  좋아합니다. 안타갑게도, 삼성에서 일할 때는, 소프트웨어
+                  프로그램을 자유롭게 다룰 수 없는 부서에서 일했습니다. 은퇴
+                  후에, 저는 소프트웨어 프로그램을 다시 배우기 시작했습니다.
+                  20년 정도의 격차가 있어서 시작하기가 쉽지 않았지만,
+                  프로그래밍이 재미있어서 다시 시작할 수 있었습니다. 저는 지금은
+                  나이가 적지 않지만, 프로그래밍을 너무 좋아합니다. 저는 제
+                  기술을 보여줄 수 있는 곳에서 일을 하고 싶습니다. 그래서,
+                  회사가 필요로 하는 것을 만들어서 보상을 받고 싶습니다.
+                  프로그래밍을 하면서 가장 고려하는 것은 사용자 편의성과
+                  유지보수성입니다. 저는 항상 이러한 문제를 더 효율적이고 빠르게
+                  해결하기 위해 공부하고 있습니다. 저는 매일 아침 Medium Daily
+                  Digest와 최신 기술 잡지를 읽습니다.
+                </p>
+                <p class="pt-6 font-body leading-relaxed text-grey-20">
+                  이러한 노력을 통해 제가 배운 기술과 경험을 실제 업무에
+                  활용하고 싶습니다. 나이가 60세를 넘었지만, 이는 저의 열정과
+                  배움의 의지를 저해하는 요소가 아닙니다. 오히려, 다양한 경험과
+                  시기를 겪으며 성숙해진 판단 능력과 문제 해결 능력을 갖게
+                  되었습니다. 저는 다른 개발자들과 협업을 통해 회사의 프로젝트를
+                  성공으로 이끌 수 있을 것입니다. 일일 회의와 팀원들과의 원활한
+                  의사 소통 역시 문제 없이 수행할 수 있으며, 그 노련함은 회사에
+                  새로운 가치와 시각을 더해줄 것입니다. 나이가 저에게 더 많은
+                  통찰력과 깊이를 부여한 만큼, 회사에서 요구하는 역량을
+                  충족시키는 데 있어 어떠한 어려움도 없을 것이라 확신합니다.
+                  책임감 있게 맡은 업무를 완수하고 회사와 동료들과의 협력을 통해
+                  더 나은 결과를 만들어내고자 하는 의지가 강합니다. 마지막으로,
+                  저의 나이와 경험이 회사의 다양성과 풍부한 문화를 더욱
+                  강화하고, 다른 세대와의 다리 역할을 하며 혁신적인 아이디어를
+                  도출하는 데 기여할 것이라 믿습니다. 저의 업무 열정과 전문성이
+                  회사의 미래 성장에 긍정적인 영향을 미칠 수 있기를 희망합니다.
+                  감사합니다.
                 </p>
               </div>
               <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
@@ -513,7 +644,7 @@
                       ></div>
                     </div>
                   </div>
-                  </div>
+                </div>
                 <div class="pt-2">
                   <div class="flex items-end justify-between">
                     <h4 class="font-body font-semibold uppercase text-black">
@@ -567,16 +698,30 @@
           </div>
 
           <div class="container py-16 md:py-20" id="services">
-            <h2
-              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-            >
-              Here's what I'm good at
-            </h2>
-            <h3
-              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-            >
-              These are the technologies
-            </h3>
+            <div class="" en lang id="enContent2">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                Here's what I'm good at
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                These are the technologies
+              </h3>
+            </div>
+            <div class="" ko lang id="koContent2">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                경험 했던 기술 들 입니다. 
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                다음은 기술 들에 대한 간단한 설명입니다.
+              </h3>
+            </div>
             <div
               class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
             >
@@ -1145,24 +1290,19 @@
                     <label class="modal-box relative" for="">
                       <h3 class="text-lg font-bold">Kubernetes</h3>
                       <p class="py-4 text-left">
-                        I have experience operating programs by creating front-end and back-end
-                         applications as containers and deploying them on 
-                         GKE (Google Kubernetes Engine) using the ArgoCD Open Source tool.
+                        I have experience operating programs by creating
+                        front-end and back-end applications as containers and
+                        deploying them on GKE (Google Kubernetes Engine) using
+                        the ArgoCD Open Source tool.
                       </p>
                     </label>
                   </label>
                   <!-- modal end -->
                   <div class="hidden group-hover:block">
-                    <img
-                      src="assets/img/k8s.png"
-                      alt="Graphic Design icon"
-                    />
+                    <img src="assets/img/k8s.png" alt="Graphic Design icon" />
                   </div>
                   <div class="block group-hover:hidden">
-                    <img
-                      src="assets/img/k8s.png"
-                      alt="Graphic Design icon"
-                    />
+                    <img src="assets/img/k8s.png" alt="Graphic Design icon" />
                   </div>
                 </div>
                 <div class="text-center">
@@ -1174,8 +1314,9 @@
                   <p
                     class="text-grey pt-4 text-sm group-hover:text-white md:text-base"
                   >
-                  Kubernetes, also known as K8s, is an open-source system for automating deployment,
-                   scaling, and management of containerized applications.
+                    Kubernetes, also known as K8s, is an open-source system for
+                    automating deployment, scaling, and management of
+                    containerized applications.
                   </p>
                 </div>
               </div>
@@ -1341,16 +1482,30 @@
           </div>
 
           <div class="container py-16 md:py-20" id="portfolio">
-            <h2
-              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-            >
-              Check out my Portfolio
-            </h2>
-            <h3
-              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-            >
-              Here's what I have done with the past
-            </h3>
+            <div class="" en lang id="enContent3">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                Check out my Portfolio
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                Here's what I have done with the past
+              </h3>
+            </div>
+            <div class="" ko lang id="koContent3">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                프로젝트 경험. 
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                각 항목에는 프로젝트에 대한 설명이 연결되어 있습니다.
+              </h3>
+            </div>
 
             <div
               class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
@@ -1409,16 +1564,30 @@
           </div>
 
           <div class="container py-16 md:py-20" id="work">
-            <h2
-              class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-            >
-              My work experience
-            </h2>
-            <h3
-              class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-            >
-              Here's what I did projects in the Korea before settling in the US
-            </h3>
+            <div class="" en lang id="enContent6">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                My work experience
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                Here's what I did projects in Korea before settling in the US
+              </h3>
+            </div>
+            <div class="" ko lang id="koContent6">
+              <h2
+                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+              >
+                프로젝트 실행 경험
+              </h2>
+              <h3
+                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+              >
+                다음은 저의 프로젝트 경험 이력 입니다. 
+              </h3>
+            </div>
 
             <div class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
               <span
@@ -1981,11 +2150,20 @@
                     My Phone
                   </p>
                 </div>
-                <p
-                  class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
-                >
-                  (+1) 213 548 1859
-                </p>
+                <div class="" en lang id="enContent5">
+                  <p
+                    class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+                  >
+                    (+1) 213 548 1859
+                  </p>
+                </div>
+                <div class="" ko lang id="koContent5">
+                  <p
+                    class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+                  >
+                    (82) 10 5014 6735
+                  </p>
+                </div>
               </div>
               <div
                 class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2"
@@ -2015,11 +2193,20 @@
                     My Address
                   </p>
                 </div>
-                <p
-                  class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
-                >
-                  3416 Manning Ave. LA. CA. USA
-                </p>
+                <div class="" en lang id="enContent4">
+                  <p
+                    class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+                  >
+                    3416 Manning Ave. LA. CA. USA
+                  </p>
+                </div>
+                <div class="" ko lang id="koContent4">
+                  <p
+                    class="pt-2 text-left font-body font-bold text-primary lg:text-lg"
+                  >
+                    서울특별시 대방동 27길 43
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -2029,7 +2216,7 @@
               class="container flex flex-col justify-between py-6 sm:flex-row"
             >
               <p class="text-center font-body text-white md:text-left">
-                © Copyright 2022. All right reserved, Wonsup Jung.
+                © Copyright 2023. All right reserved, Wonsup Jung.
               </p>
             </div>
           </div>
@@ -2037,6 +2224,6 @@
       </div>
     </div>
     <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script> -->
   </body>
 </html>
